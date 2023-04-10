@@ -5,7 +5,6 @@
   </header>
 
    <div class="panel panel-default items">
-   What is going on?
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -16,7 +15,7 @@
         </tr>
       </thead>
       <tbody>
-        <%= @order.line_items.each do |item| %>
+        <% @order.line_items.each do |item| %>
           <%= render 'item', product: item.product, quantity: item.quantity.to_i %>
         <% end %>
       </tbody>
