@@ -11,8 +11,8 @@
     </thead>
       <tbody>
         <tr>
-          <th><%= @product_count %></th>
-          <th><%= @category_count %></th>
+          <th><%= link_to @product_count, [:admin, :products], class: "link-primary" %></th>
+          <th><%= link_to @category_count, [:admin, :products], class: "link-primary" %></th>
         </tr>
       </tbody>
   </table>
