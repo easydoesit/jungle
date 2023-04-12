@@ -1,7 +1,10 @@
 <tr>
   <td>
     <h4><%= category.name %></h4>
-    <br>
-    <p><%= category[:product] %></p>
+  </td>
+  <td>
+    <% category.products.each do |product| %>
+      <p><%= product.name %></p>
+      <% end %>
   </td>
 </tr>
