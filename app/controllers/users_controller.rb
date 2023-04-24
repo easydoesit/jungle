@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  add_flash_types :info, :error, :warning
+
   def new
   end
 
@@ -8,8 +10,8 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       redirect_to '/login'
-    else
-      redirect_to '/signup'
+    elsif user.errors
+      redirect_to '/signup', notice: user.errors.messages
     end
   end
 
