@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/login'
     elsif user.errors
-      redirect_to '/signup', notice: user.errors.messages
+      redirect_to '/signup', notice: user.errors.full_messages
     end
   end
 
