@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
+
   describe 'Validations' do
 
     it 'saves a new product if all fields are valid' do
@@ -63,4 +64,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.full_messages.to_sentence).to eq "Category must exist and Category can't be blank"
     end
   end
+
 end
+
+
